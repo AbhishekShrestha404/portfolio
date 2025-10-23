@@ -8,19 +8,22 @@ import ElectricMotor from "../assets/electro-magnetic-motor.jpg";
 
 const projects = [
      {
-          title: "Voyomite",
+          title: "Vyomite Website",
           description: "Transform mechanical energy into alternating current, powering the modern electric grid",
-          image: ACGenerator
+          image: ACGenerator,
+          href: "/blog"
      },
      {
           title: "Fluid Propulsion",
           description: "Bladeless turbine using fluid dynamics for efficient, low-friction propulsion.",
-          image: FluidPropulsion
+          image: FluidPropulsion,
+          href: "/projects/vyomite-website"
      },
      {
           title: "Electro-Magnetic Motor",
           description: "Harness alternating current to produce smooth, efficient rotary motion.",
-          image: ElectricMotor
+          image: ElectricMotor,
+          href: "/projects/vyomite-website"
      }];
 ---
 
@@ -31,11 +34,16 @@ const projects = [
           <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
                {projects.map((project) => (
                     <li>
+                         <a href={project.href}
+                              class="block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500"
+                              aria-label={`Open ${project.title}`}
+                              >
                          <Image src={project.image} alt={project.title} class="aspect-[1/1.33] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4" />
                          <div class="p-1 sm:p-2">
                               <h2 class="text-base text-zinc-100">{project.title}</h2>
                               <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
                          </div>
+                         </a>
                     </li>
                ))}
           </ul>
