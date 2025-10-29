@@ -4,12 +4,16 @@ import InfoLayout from "../layouts/InfoLayout.astro";
 ---
 
 <InfoLayout>
-     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-start gap-30">
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-start gap-12">
           <div class="space-y-4 sm:space-y-12">
                <H1> Get to know Abhishek </H1>
 
-               <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+               <p class="text-xl xl:text-xl text-zinc-500 text-balance">
                   I'm <span class="text-zinc-400 ">Abhishek </span>, a UI/UX designer who transforms rough ideas into clean, intuitive products. I map user flows, build interactive prototypes in Figma, and fine-tune every detail to ensure a smooth experience. I grow quickly by creating, testing, and refining with real feedback.
+               </p>
+
+               <p class="text-xl xl:text-xl text-zinc-500 text-balance -mt-6 sm:-mt-8">
+                  Outside of design, you’ll find me chasing mountain views, gaming to unwind, or sketching and hitting the gym - always finding new ways to push myself and stay inspired.
                </p>
           </div>
 
@@ -17,11 +21,22 @@ import InfoLayout from "../layouts/InfoLayout.astro";
                <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">What I do</h2>
 
                <ul class="px-4 text-zinc-400 list-disc list-outside">
-                    <li>Turn objectives into user flows and wireframes</li>
-                    <li>Design simple, well-structured interfaces with clear hierarchy</li>
-                    <li>Create interactive prototypes that offer seamless experience</li>
-                    <li>Run quick tests and improve through informed adjustments</li>
+                    <li>Turn objectives into user flows and wireframes.</li>
+                    <li>Design simple, well-structured interfaces with clear hierarchy.</li>
+                    <li>Create interactive prototypes that offer seamless experience.</li>
+                    <li>Run quick tests and improve through informed adjustments.</li>
                </ul>
           </div>
+
+          <div class="space-y-2 text-base sm:text-lg">
+               <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skills</h2>
+
+               <ul class="px-4 text-zinc-400 list-disc list-outside">
+                    <li>Design Tools: Figma</li>
+                    <li>UX Design: Wireframing, Prototyping, User Flows</li>
+                    <li>Visual Design: Typography, Color Theory, Layout, Design Systems</li>
+               </ul>
+          </div>
+          <button class="text-zinc-500"> Resume</button>
      </div>
 </InfoLayout>
