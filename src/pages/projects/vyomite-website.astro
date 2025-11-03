@@ -16,9 +16,13 @@ import WFWork from "../../assets/wireframe/work.png";
 
 import UF1 from "../../assets/user_flows/image_1.png";
 import UF2 from "../../assets/user_flows/image_2.png";
-import Homepage from "../../assets/Homepage.png";
+import Homepage from "../../assets/overviews/home_page.png";
+import Workpage from "../../assets/overviews/work_page.png";
+import Servicepage from "../../assets/overviews/service_page.png";
+import Aboutpage from "../../assets/overviews/about_page.png";
+import Blogpage from "../../assets/overviews/demo_blog_page.png";
 // Replace with your actual prototype URL
-const prototypeUrl = "https://www.figma.com/file/your-prototype-link";
+const prototypeUrl = "https://www.figma.com/design/6wt9XmQU7UeCo9npZ2DcYz/Vyomite-Website?node-id=11-79&p=f&t=D5FPzQLW32s77RZI-0";
 // SEO – tweak later
 const title = "Vyomite Website — Case Study";
 const description =
@@ -59,7 +63,7 @@ const description =
                         class="h-full w-full overflow-hidden rounded-[1.8rem] bg-black/60"
                     >
                         <Image
-                            src={vyomiteMobandLap}
+                            src={Workpage}
                             alt="Vyomite mobile screen"
                             class="h-full w-full object-cover"
                             loading="lazy"
@@ -73,7 +77,7 @@ const description =
                         class="h-full w-full overflow-hidden rounded-[2.2rem] bg-black/60"
                     >
                         <Image
-                            src={VyomiteCaseStudy}
+                            src={Servicepage}
                             alt="Vyomite tablet screen"
                             class="h-full w-full object-cover"
                             loading="lazy"
@@ -87,7 +91,7 @@ const description =
                         class="h-full w-full overflow-hidden rounded-[1.8rem] bg-black/60"
                     >
                         <Image
-                            src={Homepage}
+                            src={Blogpage}
                             alt="Vyomite tablet detail"
                             class="h-full w-full object-cover"
                             loading="lazy"
@@ -609,7 +613,7 @@ const description =
                 [
                     {
                         title: "Home Page Overview",
-                        image: UF2,
+                        image: Homepage,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                         bullets: [
@@ -637,33 +641,33 @@ const description =
                     },
                     {
                         title: "Work Page Overview",
-                        image: UF2,
+                        image: Workpage,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                     },
                     {
                         title: "Service Page Overview",
-                        image: UF2,
+                        image: Servicepage,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                     },
                     {
                         title: "About Page Overview",
-                        image: UF2,
+                        image: Aboutpage,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                     },
                     {
                         title: "Blog Page Overview",
-                        image: UF2,
+                        image: Blogpage,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                     },
                 ].map(({ title, image, summary, bullets }, index) => (
-                    <h3 class="text-xl font-semibold text-zinc-100">
+                    <h3 class="text-xl font-semibold text-zinc-100 mt-15">
                                 {title}
                             </h3>
-                    <div class={`grid md:grid-cols-2 gap-6 items-start ${index % 2 === 1 ? '[&>*:first-child]:order-2' : ''  }`}>
+                    <div class={`grid md:grid-cols-2 gap-6 items-center ${index % 2 === 1 ? '[&>*:first-child]:order-2' : ''  }`}>
                         <div>
                                     <p class="text-zinc-300 mt-2">{summary}</p>
                                     <div class="prose prose-invert max-w-none mt-5">
@@ -681,12 +685,38 @@ const description =
                                         </ul>
                                     </div>
                                 </div>
-                                <Image
+                                {/* <Image
                                     src={image}
                                     alt="Vyomite mobile screen"
-                                    class="aspect-[4.3] rounded-xl bg-zinc-800/50"
+                                    class="rounded-xl bg-zinc-800/50 object-cover max-h-120"
                                     loading="lazy"
-                                />
+                                /> */}
+                                 <div
+                                    role="img"
+                                    aria-label={`${title} overview`}
+                                    class="rounded-xl bg-zinc-800/50 max-h-120 overflow-hidden p-3"
+                                >
+                                    <div class="grid h-full grid-cols-2 gap-3">
+                                        <div class="relative w-full overflow-hidden rounded-lg aspect-[3/4] sm:aspect-[4/5]">
+                                            <Image
+                                                src={image}
+                                                alt=""
+                                                aria-hidden="true"
+                                                class="absolute inset-0 h-full w-full object-cover object-top"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                        <div class="relative w-full overflow-hidden rounded-lg aspect-[3/4] sm:aspect-[4/5]">
+                                            <Image
+                                                src={image}
+                                                alt=""
+                                                aria-hidden="true"
+                                                class="absolute inset-0 h-full w-full object-cover object-bottom"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                         
                     </div>
                 ))
@@ -716,7 +746,7 @@ const description =
                     </p>
                     <div class="mt-5 flex items-center gap-3">
                         <a
-                            href={"https://www.figma.com/design/6wt9XmQU7UeCo9npZ2DcYz/Vyomite-Website?node-id=11-79&p=f"}
+                            href={prototypeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center justify-center rounded-full border border-purple-300/60 bg-purple-500/20 px-5 py-2 text-sm font-medium text-purple-100 hover:bg-purple-500/30 hover:border-purple-200 transition-colors"
