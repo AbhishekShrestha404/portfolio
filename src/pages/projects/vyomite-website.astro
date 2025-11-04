@@ -32,7 +32,7 @@ const description =
 ---
 
 <RootLayout title={title} description={description}>
-    <main class="px-4 sm:px-8 lg:px-12 py-8 sm:py-12">
+    <main id="top" class="px-4 sm:px-8 lg:px-12 py-8 sm:py-12">
         {/* Breadcrumbs */}
         <nav aria-label="Breadcrumb" class="text-sm text-zinc-400 mb-6">
             <a href="/" class="hover:text-zinc-200">Home</a>
@@ -235,7 +235,7 @@ const description =
         </section>
 
         {/* RESEARCH */}
-        <section class="mb-14">
+        <section class="mb-14" data-section="design-process">
             <h2
                 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100"
             >
@@ -820,6 +820,37 @@ const description =
             </p>
         </section>
     </main>
+    <a
+        href="#top"
+        class="back-to-top-button fixed bottom-6 right-6 inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/25 px-4 py-2 text-sm font-medium text-purple-100 backdrop-blur transition duration-300 ease-out opacity-0 pointer-events-none translate-y-4 hover:bg-purple-500/35 hover:border-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-300"
+        aria-label="Back to top"
+    >
+        Back to top
+    </a>
+    <script is:inline>
+        if (typeof window !== "undefined") {
+            const backToTopButton = document.querySelector(".back-to-top-button");
+            const targetSection = document.querySelector('[data-section="design-process"]');
+
+            const toggleBackToTop = () => {
+                if (!backToTopButton || !targetSection) return;
+
+                const sectionTop = targetSection.getBoundingClientRect().top;
+                const sectionVisible = sectionTop <= window.innerHeight * 0.5;
+
+                if (sectionVisible) {
+                    backToTopButton.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
+                    backToTopButton.classList.add("opacity-100", "pointer-events-auto", "translate-y-0");
+                } else {
+                    backToTopButton.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+                    backToTopButton.classList.remove("opacity-100", "pointer-events-auto", "translate-y-0");
+                }
+            };
+
+            window.addEventListener("scroll", toggleBackToTop, { passive: true });
+            toggleBackToTop();
+        }
+    </script>
 </RootLayout>
 
 <style>
