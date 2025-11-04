@@ -20,7 +20,9 @@ import Homepage from "../../assets/overviews/home_page.png";
 import Workpage from "../../assets/overviews/work_page.png";
 import Servicepage from "../../assets/overviews/service_page.png";
 import Aboutpage from "../../assets/overviews/about_page.png";
-import Blogpage from "../../assets/overviews/demo_blog_page.png";
+import BlogpageDemo from "../../assets/overviews/demo_blog_page.png";
+import Blogpage from "../../assets/blog_page.png";
+import Footer from "../../assets/footer.png";
 // Replace with your actual prototype URL
 const prototypeUrl = "https://www.figma.com/design/6wt9XmQU7UeCo9npZ2DcYz/Vyomite-Website?node-id=11-79&p=f&t=D5FPzQLW32s77RZI-0";
 // SEO – tweak later
@@ -63,9 +65,9 @@ const description =
                         class="h-full w-full overflow-hidden rounded-[1.8rem] bg-black/60"
                     >
                         <Image
-                            src={Workpage}
-                            alt="Vyomite mobile screen"
-                            class="h-full w-full object-cover"
+                            src={Blogpage}
+                            alt="Blogpage"
+                            class="h-full w-full object-cover object-top"
                             loading="lazy"
                         />
                     </div>
@@ -78,8 +80,8 @@ const description =
                     >
                         <Image
                             src={Servicepage}
-                            alt="Vyomite tablet screen"
-                            class="h-full w-full object-cover"
+                            alt="Servicepage"
+                            class="h-full w-full object-cover object-top"
                             loading="lazy"
                         />
                     </div>
@@ -91,9 +93,9 @@ const description =
                         class="h-full w-full overflow-hidden rounded-[1.8rem] bg-black/60"
                     >
                         <Image
-                            src={Blogpage}
-                            alt="Vyomite tablet detail"
-                            class="h-full w-full object-cover"
+                            src={Footer}
+                            alt="Footer"
+                            class="max-h-full w-full object-contain"
                             loading="lazy"
                         />
                     </div>
@@ -372,37 +374,37 @@ const description =
             <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
                 <Image
                     src={WFAbout}
-                    alt="Vyomite mobile screen"
+                    alt="About wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
                 <Image
                     src={WFContact}
-                    alt="Vyomite mobile screen"
+                    alt="Contact wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
                 <Image
                     src={WFHome}
-                    alt="Vyomite mobile screen"
+                    alt="Home wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
                 <Image
                     src={WFHome2}
-                    alt="Vyomite mobile screen"
+                    alt="Home2 wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
                 <Image
                     src={WFService}
-                    alt="Vyomite mobile screen"
+                    alt="Service wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
                 <Image
                     src={WFWork}
-                    alt="Vyomite mobile screen"
+                    alt="Work wireframe"
                     class="aspect-[5/4] rounded-xl bg-zinc-800/50"
                     loading="lazy"
                 />
@@ -659,7 +661,7 @@ const description =
                     },
                     {
                         title: "Blog Page Overview",
-                        image: Blogpage,
+                        image: BlogpageDemo,
                         summary:
                             "A focused homepage with a clear value statement and prominent CTAs, followed by a concise services grid, client testimonials, and featured projects to help visitors evaluate work and contact quickly.",
                     },
