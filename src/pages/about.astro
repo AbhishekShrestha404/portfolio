@@ -1,108 +1,63 @@
 ---
-import { Image } from "astro:assets";
-import H1 from "../components/h1.astro";
-import InfoLayout from "../layouts/InfoLayout.astro";
-import Resume from "../assets/Resume.pdf";
-import Portrait from "../assets/portrait.jpg";
+import { Image } from 'astro:assets';
+import H1 from '../components/h1.astro';
+import InfoLayout from '../layouts/InfoLayout.astro';
+import Resume from '../assets/Resume.pdf';
+import Portrait from '../assets/portrait.jpg';
 ---
 
 <InfoLayout>
-     {/* Top-right Resume button */}
-     <a
-          href={Resume}
-          download="Abhishek-Resume.pdf"
-          aria-label="Download Resume (PDF)"
-          class="fixed top-8 right-12 z-50 inline-flex items-center gap-2
+    {/* Top-right Resume button */}
+    <a
+        href={Resume}
+        download="Abhishek-Resume.pdf"
+        aria-label="Download Resume (PDF)"
+        class="fixed top-8 right-12 z-50 inline-flex items-center gap-2
        rounded-2xl border-2 border-zinc-600/60 px-4 py-2.5 text-sm sm:text-base
        text-zinc-200 hover:bg-zinc-800/30 active:scale-[.98]
        focus:outline-none focus:ring-2 focus:ring-zinc-500/40"
-     >
-          Resume
-     </a>
+    >
+        Resume
+    </a>
 
-     <div
-          class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-start gap-12"
-     >
-          <div class="space-y-4 sm:space-y-12">
-               <H1> Get to know Abhishek </H1>
-               <div class="flex gap-20 align-top">
-                    <div class="m-w-250">
-                         <p
-                              class="text-xl xl:text-xl text-zinc-500 text-balance"
-                         >
-                              I'm <span class="text-zinc-400">Abhishek </span>,
-                              a UI/UX designer who transforms rough ideas into
-                              clean, intuitive products. I map user flows, build
-                              interactive prototypes in Figma, and fine-tune
-                              every detail to ensure a smooth experience. I grow
-                              quickly by creating, testing, and refining with
-                              real feedback.
-                         </p>
-                         <br />
-                         <p
-                              class="text-xl xl:text-xl text-zinc-500 text-balance"
-                         >
-                              Outside of design, you’ll find me chasing mountain
-                              views, gaming to unwind, or sketching and hitting
-                              the gym - always finding new ways to push myself
-                              and stay inspired.
-                         </p>
-                         <div class="space-y-2 text-base sm:text-lg mt-10">
-                              <h2
-                                   class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500"
-                              >
-                                   What I do
-                              </h2>
+    <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-start gap-12">
+        <div class="space-y-4 sm:space-y-12">
+            <H1> Get to know Abhishek </H1>
+            <div class="flex gap-20 align-top flex-col-reverse lg:flex-row">
+                <div class="m-w-250">
+                    <p class="text-xl xl:text-xl text-zinc-500 text-balance">
+                        I'm <span class="text-zinc-400">Abhishek </span>, a UI/UX designer who transforms rough ideas
+                        into clean, intuitive products. I map user flows, build interactive prototypes in Figma, and
+                        fine-tune every detail to ensure a smooth experience. I grow quickly by creating, testing, and
+                        refining with real feedback.
+                    </p>
+                    <br />
+                    <p class="text-xl xl:text-xl text-zinc-500 text-balance">
+                        Outside of design, you’ll find me chasing mountain views, gaming to unwind, or sketching and
+                        hitting the gym - always finding new ways to push myself and stay inspired.
+                    </p>
+                    <div class="space-y-2 text-base sm:text-lg mt-10">
+                        <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">What I do</h2>
 
-                              <ul
-                                   class="px-4 text-zinc-400 list-disc list-outside"
-                              >
-                                   <li>
-                                        Turn objectives into user flows and
-                                        wireframes.
-                                   </li>
-                                   <li>
-                                        Design simple, well-structured
-                                        interfaces with clear hierarchy.
-                                   </li>
-                                   <li>
-                                        Create interactive prototypes that offer
-                                        seamless experience.
-                                   </li>
-                                   <li>
-                                        Run quick tests and improve through
-                                        informed adjustments.
-                                   </li>
-                              </ul>
-                         </div>
-                         <div class="space-y-2 text-base sm:text-lg mt-10">
-                              <h2
-                                   class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500"
-                              >
-                                   Skills
-                              </h2>
-
-                              <ul
-                                   class="px-4 text-zinc-400 list-disc list-outside"
-                              >
-                                   <li>Design Tools: Figma</li>
-                                   <li>
-                                        UX Design: Wireframing, Prototyping,
-                                        User Flows
-                                   </li>
-                                   <li>
-                                        Visual Design: Typography, Color Theory,
-                                        Layout, Design Systems
-                                   </li>
-                              </ul>
-                         </div>
+                        <ul class="px-4 text-zinc-400 list-disc list-outside">
+                            <li>Turn objectives into user flows and wireframes.</li>
+                            <li>Design simple, well-structured interfaces with clear hierarchy.</li>
+                            <li>Create interactive prototypes that offer seamless experience.</li>
+                            <li>Run quick tests and improve through informed adjustments.</li>
+                        </ul>
                     </div>
-                    <Image
-                         src={Portrait}
-                         alt={"test"}
-                         class="h-auto w-100 object-contain rounded-lg"
-                    />
-               </div>
-          </div>
-     </div>
+                    <div class="space-y-2 text-base sm:text-lg mt-10">
+                        <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skills</h2>
+
+                        <ul class="px-4 text-zinc-400 list-disc list-outside">
+                            <li>Design Tools: Figma</li>
+                            <li>UX Design: Wireframing, Prototyping, User Flows</li>
+                            <li>Visual Design: Typography, Color Theory, Layout, Design Systems</li>
+                        </ul>
+                    </div>
+                </div>
+                <Image src={Portrait} alt={'test'} class="h-auto w-100 object-contain rounded-lg" />
+            </div>
+        </div>
+    </div>
 </InfoLayout>
