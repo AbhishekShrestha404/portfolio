@@ -829,8 +829,8 @@ const description =
     </a>
     <script is:inline>
         if (typeof window !== "undefined") {
-            const backToTopButton = document.querySelector(".back-to-top-button");
-            const targetSection = document.querySelector('[data-section="design-process"]');
+            const backToTopButton = document.querySelector<HTMLAnchorElement>(".back-to-top-button");
+            const targetSection = document.querySelector<HTMLElement>('[data-section="design-process"]');
 
             const toggleBackToTop = () => {
                 if (!backToTopButton || !targetSection) return;

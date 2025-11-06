@@ -9,21 +9,26 @@ import AvailableForWork from "../components/available.astro";
 
 <RootLayout>
 	<main>
-		<div class="group relative w-full min-h-dvh flex items-center justify-center">
+		<div
+			class="group relative w-full min-h-dvh flex items-center justify-center"
+		>
 			<div class="absolute w-full h-dvh -z-10">
 				<WarpBackground
 					color1="#09090b"
 					color2="#27272a"
 					color3="#52525b"
 					speed={0.6}
-					swirl={0.5}	
+					swirl={0.5}
 					swirlIterations={10}
 					shapeScale={0.3}
 					client:load
 				/>
 			</div>
+<div
+  class="p-4 sm:p-8 absolute w-full h-dvh flex flex-col justify-between z-10"
+>
 
-			<div class="p-4 sm:p-8 absolute w-full h-dvh flex flex-col justify-between z-10">
+
 				<div>
 					<H1 size="large"> Abhishek <br /> Patrabansha</H1>
 				</div>
@@ -32,14 +37,19 @@ import AvailableForWork from "../components/available.astro";
 					<AvailableForWork className="py-4" />
 					<div class="mb-2 sm:mb-4 flex items-center justify-between">
 						<div class="flex items-center gap-4">
-							<Link href="mailto:abhishekstha404@gmail.com">Let's connect</Link>
-							<Link href="/projects" variant="secondary">View recent work</Link>
+							<Link href="mailto:abhishekstha404@gmail.com"
+								>Let's connect</Link
+							>
+							<Link href="/projects" variant="secondary"
+								>View recent work</Link
+							>
 						</div>
 
 						<Navigation client:load>
-							<!-- <Link href="/projects/vyomite-website" variant="secondary">Case Study</Link> -->
 							<Link href="/about" variant="secondary">About</Link>
-							<Link href="/contact" variant="secondary">Contact</Link>
+							<Link href="/contact" variant="secondary"
+								>Contact</Link
+							>
 						</Navigation>
 					</div>
 				</div>
