@@ -232,10 +232,11 @@ const description =
                     for potential clients.
                 </li>
             </ul>
+            <div data-section="goals-trigger" class="h-px" aria-hidden="true"></div>
         </section>
 
         {/* RESEARCH */}
-        <section class="mb-14" data-section="design-process">
+        <section class="mb-14">
             <h2
                 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100"
             >
@@ -485,7 +486,7 @@ const description =
             <div class="mt-5">
                 <p class="text-zinc-200 font-medium">StyleGuide</p>
 
-                <div class="mt-5 grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="mt-5 grid md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-zinc-200 font-medium mb-2">
                             Primary Colors
@@ -542,7 +543,7 @@ const description =
                         </div>
                     </div>
 
-                    <div class="md:col-span-2">
+                    <div class="col-span-2">
                         <h3 class="text-zinc-200 font-medium mb-2">
                             Secondary Colors
                         </h3>
@@ -564,7 +565,7 @@ const description =
                         <h3 class="mt-6 text-zinc-200 font-medium">
                             Typography
                         </h3>
-                        <div class="flex gap-3 flex-col lg:flex-row">
+                        <div class="flex gap-3">
                             <div
                                 class="mt-2 rounded-xxl text-zinc-200 p-4 h-40 aspect-[3/2] flex flex-col justify-end"
                             >
@@ -829,16 +830,16 @@ const description =
     </a>
     <script is:inline>
         if (typeof window !== "undefined") {
-            const backToTopButton = document.querySelector<HTMLAnchorElement>(".back-to-top-button");
-            const targetSection = document.querySelector<HTMLElement>('[data-section="design-process"]');
+            const backToTopButton = document.querySelector(".back-to-top-button");
+            const targetSection = document.querySelector('[data-section="goals-trigger"]');
 
             const toggleBackToTop = () => {
                 if (!backToTopButton || !targetSection) return;
 
-                const sectionTop = targetSection.getBoundingClientRect().top;
-                const sectionVisible = sectionTop <= window.innerHeight * 0.5;
+                const { top } = targetSection.getBoundingClientRect();
+                const sectionReached = top <= 0;
 
-                if (sectionVisible) {
+                if (sectionReached) {
                     backToTopButton.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
                     backToTopButton.classList.add("opacity-100", "pointer-events-auto", "translate-y-0");
                 } else {
@@ -848,6 +849,8 @@ const description =
             };
 
             window.addEventListener("scroll", toggleBackToTop, { passive: true });
+            window.addEventListener("resize", toggleBackToTop, { passive: true });
+            window.addEventListener("load", toggleBackToTop);
             toggleBackToTop();
         }
     </script>
