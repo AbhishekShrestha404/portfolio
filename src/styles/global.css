@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme inline {
+	--font-sans: "Rubik", var(--font-geist), ui-sans-serif, system-ui, -apple-system,
+		BlinkMacSystemFont, "Segoe UI", sans-serif;
+}*** End Patch

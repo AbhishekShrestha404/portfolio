@@ -1,0 +1,14 @@
+---
+import clsx from "clsx";
+import ExternalLink from "./external-link.astro";
+
+const pathname = Astro.url.pathname;
+---
+
+<footer class="py-4 px-4 sm:px-12 w-full fixed bottom-0 flex items-center gap-4 sm:gap-8 bg-zinc-900" >
+    <ExternalLink href="/" openNewTab={false}>Home</ExternalLink>
+    <ExternalLink href="/projects" openNewTab={false}>Projects</ExternalLink>
+    <!-- <ExternalLink href="/blog" openNewTab={false}>Blog</ExternalLink> -->
+    <ExternalLink href="/about" openNewTab={false}>About</ExternalLink>
+    <ExternalLink href="/contact" openNewTab={false}>Contact</ExternalLink>
+</footer>
